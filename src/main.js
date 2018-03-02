@@ -10,7 +10,6 @@ import 'onsenui/css/onsen-css-components.css';
 import Vue from 'vue';
 import VueOnsen from 'vue-onsenui';
 import store from './store';
-// import store from './store';
 import app from './app';
 import CustomToolbar from './partials/CustomToolbar';
 

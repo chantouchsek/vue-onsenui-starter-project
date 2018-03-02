@@ -38,7 +38,7 @@
           // Sets animations
           animation: name,
           // Resets default options
-          callback: () => this.$store.commit('navigator/options', {}),
+          callback: () => this.$store.dispatch('navigator/options', {}),
         });
 
         this.$store.dispatch('navigator/push', {

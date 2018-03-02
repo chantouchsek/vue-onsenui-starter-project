@@ -3,7 +3,7 @@
     <v-ons-splitter>
       <v-ons-splitter-side
         swipeable collapse width="250px"
-        :animation="$ons.platform.isAndroid() ? 'overlay' : 'reveal'"
+        :animation="md ? 'overlay' : 'reveal'"
         :swipe-target-width="md && 25"
         :open.sync="menuIsOpen">
         <menu-page></menu-page>

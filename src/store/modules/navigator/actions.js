@@ -11,11 +11,10 @@ import * as types from './mutation-types';
  * Action fired to push.
  *
  * @param {function} commit Commit function to update the store.
- * @param state
  * @param payload commit Commit function to update the store.
  */
 
-const push = ({ commit, state }, payload) => {
+const push = ({ commit }, payload) => {
   commit(types.PUSH, payload);
 };
 
