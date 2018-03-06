@@ -10,7 +10,7 @@ import 'onsenui/css/onsen-css-components.css';
 import Vue from 'vue';
 import VueOnsen from 'vue-onsenui';
 import store from './store';
-import app from './app';
+import Navigator from './components/Navigator';
 import CustomToolbar from './partials/CustomToolbar';
 
 Vue.config.productionTip = false;
@@ -23,7 +23,7 @@ Vue.component('custom-toolbar', CustomToolbar); // Common toolbar
 
 new Vue({
   el: '#app',
-  render: h => h(app),
+  render: h => h(Navigator),
   /**
    * The Vuex Store
    */

@@ -31,7 +31,7 @@
     },
     methods: {
       storePop() {
-        this.$store.commit('navigator/pop');
+        this.$store.dispatch('navigator/pop');
       },
       showPopTip() {
         !this.shutUp && this.$ons.notification.toast({
