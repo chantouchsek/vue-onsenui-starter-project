@@ -6,7 +6,7 @@ module.exports = merge(prodEnv, {
   NODE_ENV: '"development"',
   API_LOCATION: '"http://hikari.food.test"',
   API_CLIENT_ID: '"2"',
-  API_CLIENT_SECRET: '"tGxZzTwhFw6dFclGTJf9SrA4Ca896rDOFYAlDJ8M"',
+  API_CLIENT_SECRET: '"0kiqRAap2nKNN9IC3pYRaAutYy52OEiSplUxkKqL"',
   BROADCAST_AUTH_ENDPOINT: '""',
   PUSHER_KEY: '""',
   PUSHER_CLUSTER: '""',

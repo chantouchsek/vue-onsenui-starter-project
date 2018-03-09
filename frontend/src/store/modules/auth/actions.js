@@ -38,6 +38,7 @@ export const login = ({ commit }, payload) => {
         type: 'success',
         message: 'Login successful!',
         toastVisible: true,
+        timeout: 1000,
       });
 
       store.dispatch('navigator/push', Home);
@@ -47,6 +48,7 @@ export const login = ({ commit }, payload) => {
         type: 'danger',
         message: 'Could not login',
         toastVisible: true,
+        timeout: 1000,
       });
     });
 };

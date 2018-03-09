@@ -1,38 +1,22 @@
 <template>
-  <layouts>
-    <v-ons-list>
-      <v-ons-list-header>Form Login</v-ons-list-header>
-      <v-ons-list-item :modifier="md ? 'nodivider' : ''">
-        <div class="left">
-          <v-ons-icon icon="md-face" class="list-item__icon"></v-ons-icon>
+  <layouts id="login">
+    <div class="background"></div>
+    <div class="content">
+      <div class="content-inner">
+        <div class="note-login center">
+          IDとPASSWORDを入力して<br>ログインしてください
         </div>
-        <label class="center">
-          <v-ons-input float maxlength="20"
-                       placeholder="Name"
-                       v-model="user.username"
-          >
-          </v-ons-input>
-        </label>
-      </v-ons-list-item>
-
-      <v-ons-list-item :modifier="md ? 'nodivider' : ''">
-        <div class="left">
-          <v-ons-icon icon="md-lock" class="list-item__icon"></v-ons-icon>
-        </div>
-        <label class="center">
-          <v-ons-input float maxlength="20" type="password"
-                       placeholder="Password"
-                       v-model="user.password"
-          >
-          </v-ons-input>
-        </label>
-      </v-ons-list-item>
-      <v-ons-list-item :modifier="md ? 'nodivider' : ''">
         <div class="center">
-          <v-ons-button modifier="large" class="button-margin" @click.native="login">Login</v-ons-button>
+          <input type="text" class="id-input" placeholder="ID" v-model="user.username" />
         </div>
-      </v-ons-list-item>
-    </v-ons-list>
+        <div class="center">
+          <input type="password" class="password-input" placeholder="PASSWORD" v-model="user.password" />
+        </div>
+        <div class="center">
+          <v-ons-button modifier="large" class="button-margin login-button" @click.native="login">ログイン</v-ons-button>
+        </div>
+      </div>
+    </div>
   </layouts>
 </template>
 <script>

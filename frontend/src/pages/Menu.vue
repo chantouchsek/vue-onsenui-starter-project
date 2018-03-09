@@ -22,7 +22,7 @@
       </v-ons-list-item>
     </v-ons-list>
 
-    <v-ons-list-title>Links</v-ons-list-title>
+    <v-ons-list-title>Settings</v-ons-list-title>
     <v-ons-list>
       <v-ons-list-item v-for="item in links" :key="item.title"
                        :modifier="md && 'nodivider'"
@@ -47,7 +47,7 @@
   export default {
     methods: {
       loadView(index) {
-        this.$store.dispatch('tabbar/set', index + 1);
+        this.$store.dispatch('tabbar/set', index);
         this.$store.dispatch('splitter/toggle');
       },
       loadLink(url) {
@@ -88,16 +88,24 @@
         ],
         access: [
           {
-            title: 'Home',
+            title: '予算・売上',
+            icon: 'ion-camera, material:md-camera',
+          },
+          {
+            title: '日報・掲示板',
             icon: 'ion-home, material:md-home',
           },
           {
-            title: 'Forms',
+            title: 'タイムカード',
             icon: 'ion-edit, material:md-edit',
           },
           {
-            title: 'Animations',
-            icon: 'ion-film-marker, material: md-movie-alt',
+            title: 'クエスト',
+            icon: 'ion-film-marker, material:md-film-marker',
+          },
+          {
+            title: 'カレンダー',
+            icon: 'ion-calendar, material:md-calendar',
           },
         ],
       };

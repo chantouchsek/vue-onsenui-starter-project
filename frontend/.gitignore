@@ -15,3 +15,7 @@ selenium-debug.log
 *.njsproj
 *.sln
 /.idea
+platforms/*
+www/*
+plugins/*
+package-lock.json

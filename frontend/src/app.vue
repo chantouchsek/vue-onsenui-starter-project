@@ -10,16 +10,16 @@
       </v-ons-splitter-side>
 
       <v-ons-splitter-content>
-        <tabbar />
+        <tabbar/>
       </v-ons-splitter-content>
     </v-ons-splitter>
   </v-ons-page>
 </template>
 
 <script>
-  import Tabbar from './components/Tabbar';
-  import MenuPage from './pages/Menu';
-  import Login from './pages/login/Index';
+  // import Splash from '@/components/Splash';
+  import Tabbar from '@/components/Tabbar';
+  import MenuPage from '@/pages/Menu';
 
   export default {
     name: 'app',
@@ -35,14 +35,8 @@
       },
     },
     components: {
-      Login,
       Tabbar,
       MenuPage,
-    },
-    beforeCreate() {
-      if (!this.$store.state.auth.authenticated) {
-        this.$store.dispatch('navigator/push', Login);
-      }
     },
   };
 </script>

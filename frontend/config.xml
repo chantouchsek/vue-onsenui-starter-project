@@ -1,12 +1,8 @@
 <?xml version='1.0' encoding='utf-8'?>
 <widget id="io.cordova.helloworld" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
-    <name>frontend</name>
-    <description>
-      Vue.js + Onsen UI + Cordova sample app
-    </description>
-    <author email="dev@cordova.apache.org" href="http://cordova.io">
-      Vue.js + Onsen UI + Cordova teams
-    </author>
+    <name>Hikari Food</name>
+    <description>Vue.js + Onsen UI + Cordova sample app</description>
+    <author email="dev@cordova.apache.org" href="http://cordova.io">Vue.js + Onsen UI + Cordova teams</author>
     <content src="index.html" />
     <plugin name="cordova-plugin-whitelist" spec="1" />
     <access origin="*" />
@@ -23,4 +19,72 @@
         <allow-intent href="itms:*" />
         <allow-intent href="itms-apps:*" />
     </platform>
+    <preference name="SplashScreen" value="screen" />
+    <preference name="SplashScreenDelay" value="3000" />
+    <preference name="SplashMaintainAspectRatio" value="true" />
+    <preference name="AutoHideSplashScreen" value="true" />
+    <preference name="FadeSplashScreen" value="true" />
+    <preference name="FadeSplashScreenDuration" value="250" />
+    <preference name="ShowSplashScreenSpinner" value="true" />
+    <preference name="ios-XCBuildConfiguration-TARGETED_DEVICE_FAMILY" value="1,2" />
+    <platform name="ios">
+        <icon height="57" src="/res/icon/ios/icon.png" width="57" />
+        <icon height="114" src="/res/icon/ios/icon@2x.png" width="114" />
+        <icon height="72" src="/res/icon/ios/icon-72.png" width="72" />
+        <icon height="144" src="/res/icon/ios/icon-72@2x.png" width="144" />
+        <icon height="60" src="/res/icon/ios/icon-60.png" width="60" />
+        <icon height="120" src="/res/icon/ios/icon-60@2x.png" width="120" />
+        <icon height="180" src="/res/icon/ios/icon-60@3x.png" width="180" />
+        <icon height="76" src="/res/icon/ios/icon-76.png" width="76" />
+        <icon height="152" src="/res/icon/ios/icon-76@2x.png" width="152" />
+        <icon height="40" src="/res/icon/ios/icon-40.png" width="40" />
+        <icon height="80" src="/res/icon/ios/icon-40@2x.png" width="80" />
+        <icon height="50" src="/res/icon/ios/icon-50.png" width="50" />
+        <icon height="100" src="/res/icon/ios/icon-50@2x.png" width="100" />
+        <icon height="29" src="/res/icon/ios/icon-small.png" width="29" />
+        <icon height="58" src="/res/icon/ios/icon-small@2x.png" width="58" />
+        <icon height="87" src="/res/icon/ios/icon-small@3x.png" width="87" />
+        <icon height="167" src="/res/icon/ios/icon-83.5@2x~ipad.png" width="167" />
+        <splash height="480" src="/res/screen/ios/Default~iphone.png" width="320" />
+        <splash height="960" src="/res/screen/ios/Default@2x~iphone.png" width="640" />
+        <splash height="1136" src="/res/screen/ios/Default-568h@2x~iphone.png" width="640" />
+        <splash height="1334" src="/res/screen/ios/Default-667h.png" width="750" />
+        <splash height="2208" src="/res/screen/ios/Default-736h.png" width="1242" />
+        <splash height="1242" src="/res/screen/ios/Default-Landscape-736h.png" width="2208" />
+        <splash height="1024" src="/res/screen/ios/Default-Portrait~ipad.png" width="768" />
+        <splash height="768" src="/res/screen/ios/Default-Landscape~ipad.png" width="1024" />
+        <splash height="2048" src="/res/screen/ios/Default-Portrait@2x~ipad.png" width="1536" />
+        <splash height="1536" src="/res/screen/ios/Default-Landscape@2x~ipad.png" width="2048" />
+        <config-file parent="CFBundleLocalizations" platform="ios" target="*-Info.plist">
+            <array>
+                <string>en</string>
+            </array>
+        </config-file>
+    </platform>
+    <platform name="android">
+        <splash density="ldpi" src="/res/icon/android/icon-36-ldpi.png" />
+        <splash density="mdpi" src="/res/icon/android/icon-48-mdpi.png" />
+        <splash density="hdpi" src="/res/icon/android/icon-72-hdpi.png" />
+        <splash density="xhdpi" src="/res/icon/android/icon-96-xhdpi.png" />
+    </platform>
+    <platform name="windows">
+        <icon src="/res/winrt/icon/package_logo_winrt.png" target="StoreLogo" />
+        <icon src="/res/winrt/icon/app_logo_winrt.png" target="Square150x150Logo" />
+        <icon src="/res/winrt/icon/app_small_logo_winrt.png" target="Square30x30Logo" />
+        <icon src="/res/winrt/icon/app_tile_wide_logo_winrt.png" target="Wide315x150Logo" />
+        <splash height="300" src="/res/winrt/screen/app_splash_screen_winrt.png" width="620" />
+    </platform>
+    <platform name="chrome">
+        <icon height="128" src="/platforms/chrome/icon.png" width="128" />
+    </platform>
+    <platform name="browser">
+        <preference name="SplashScreen" value="/images/browser/splashscreen.jpg" />
+        <preference name="SplashScreenDelay" value="3000" />
+        <preference name="SplashScreenBackgroundColor" value="green" />
+        <preference name="ShowSplashScreen" value="false" />
+        <preference name="SplashScreenWidth" value="600" />
+        <preference name="SplashScreenHeight" value="300" />
+    </platform>
+    <plugin name="cordova-plugin-splashscreen" spec="^5.0.2" />
+    <engine name="android" spec="^7.0.0" />
 </widget>

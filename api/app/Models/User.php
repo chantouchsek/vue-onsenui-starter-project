@@ -7,6 +7,11 @@ use Illuminate\Foundation\Auth\User as Authenticatable;
 use Laravel\Passport\HasApiTokens;
 use Spatie\Permission\Traits\HasRoles;
 
+/**
+ * @property \Carbon\Carbon $created_at
+ * @property int $id
+ * @property \Carbon\Carbon $updated_at
+ */
 class User extends Authenticatable
 {
     use Notifiable, HasApiTokens, HasRoles;
@@ -32,11 +37,11 @@ class User extends Authenticatable
     /**
      * Find the user identified by the given $identifier.
      *
-     * @param $identifier email|name
+     * @param $identifier email|id
      * @return mixed
      */
     public function findForPassport($identifier)
     {
-        return User::orWhere('email', $identifier)->orWhere('name', $identifier)->first();
+        return $this->orWhere('id', $identifier)->orWhere('email', $identifier)->first();
     }
 }

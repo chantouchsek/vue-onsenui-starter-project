@@ -1,6 +1,11 @@
 <template>
   <v-ons-page>
-    <custom-toolbar v-bind="toolbarInfo"> </custom-toolbar>
+    <custom-toolbar v-bind="toolbarInfo">
+      <div slot="right">
+        <v-ons-icon icon="fa-circle-thin" class="color-green"></v-ons-icon>
+        <v-ons-icon icon="fa-star-o" class="color-green"></v-ons-icon>
+      </div>
+    </custom-toolbar>
 
     <v-ons-pull-hook
       :action="onAction"
@@ -46,7 +51,6 @@
 <script>
   /* eslint-disable no-plusplus */
 
-
   export default {
     data() {
       return {
@@ -84,7 +88,7 @@
       },
       getRandomData() {
         const data = [];
-        for (let i = 0; i < 8; i++) {
+        for (let i = 0; i < 5; i++) {
           data.push(this.getRandomKitten());
         }
         return data;

@@ -7,6 +7,17 @@
  */
 import 'onsenui/css/onsenui.css';
 import 'onsenui/css/onsen-css-components.css';
+
+/* ============
+ * Styling
+ * ============
+ *
+ * Require the application styling.
+ *
+ * http://stylus-lang.com/
+ */
+import '@/assets/stylus/app.styl';
+
 /* ============
  * Vue
  * ============

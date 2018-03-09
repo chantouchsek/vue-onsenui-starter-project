@@ -11,10 +11,15 @@
   /* eslint-disable no-unused-expressions,no-return-assign */
 
   import app from '@/app';
+  import Splash from '@/components/Splash';
 
   export default {
     beforeCreate() {
-      this.$store.dispatch('navigator/push', app);
+      if (!this.$store.state.auth.authenticated) {
+        this.$store.dispatch('navigator/push', Splash);
+      } else {
+        this.$store.dispatch('navigator/push', app);
+      }
     },
     data() {
       return {

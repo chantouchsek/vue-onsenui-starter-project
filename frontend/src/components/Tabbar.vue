@@ -11,7 +11,7 @@
     </custom-toolbar>
 
     <v-ons-tabbar
-      position="auto"
+      position="bottom"
       swipeable
       :modifier="md ? 'autogrow white-content' : null"
       :on-swipe="md ? onSwipe : null"
@@ -26,10 +26,15 @@
 <script>
   /* eslint-disable max-len,one-var,no-mixed-operators */
 
-  import Camera from '@/pages/Camera';
-  import Home from '@/pages/Home';
-  import Forms from '@/pages/Forms';
-  import Animations from '@/pages/Animations';
+  // import Camera from '@/pages/Camera';
+  // import Home from '@/pages/Home';
+  // import Forms from '@/pages/Forms';
+  // import Animations from '@/pages/Animations';
+  import Calendar from '@/components/calendar/index';
+  import budgetSales from '@/components/budgetSales/index';
+  import dailyReports from '@/components/dailyReports/index';
+  import timeCard from '@/components/timeCard/index';
+  import quest from '@/components/quest/index';
 
   // Just a linear interpolation formula
   const lerp = (x0, x1, t) => parseInt((1 - t) * x0 + t * x1, 10);
@@ -37,6 +42,7 @@
   const red = [244, 67, 54];
   const blue = [30, 136, 229];
   const purple = [103, 58, 183];
+  const yellow = [100, 88, 113];
 
   export default {
     data() {
@@ -48,30 +54,36 @@
         topPosition: 0,
         tabs: [
           {
-            label: this.md ? null : 'Camera',
+            label: this.md ? null : '予算・売上',
             icon: 'ion-camera, material:md-camera',
-            page: Camera,
+            page: budgetSales,
             theme: red,
-            style: this.md ? { maxWidth: '60px' } : {},
-            top: -105, // Toolbar + Tabbar heights
+            // style: this.md ? { maxWidth: '60px' } : {},
+            // top: -105, // Toolbar + Tabbar heights
           },
           {
-            label: 'Home',
-            icon: this.md ? null : 'ion-home',
-            page: Home,
+            label: this.md ? null : '日報・掲示板',
+            icon: this.md ? 'ion-home' : 'ion-home',
+            page: dailyReports,
             theme: red,
           },
           {
-            label: 'Forms',
-            icon: this.md ? null : 'ion-edit',
-            page: Forms,
+            label: this.md ? null : 'タイムカード',
+            icon: this.md ? 'ion-edit' : 'ion-edit',
+            page: timeCard,
             theme: blue,
           },
           {
-            label: 'Anim',
-            icon: this.md ? null : 'ion-film-marker',
-            page: Animations,
+            label: this.md ? null : 'クエスト',
+            icon: this.md ? 'ion-film-marker' : 'ion-film-marker',
+            page: quest,
             theme: purple,
+          },
+          {
+            label: this.md ? null : 'カレンダー',
+            icon: this.md ? 'ion-calendar' : 'ion-calendar',
+            page: Calendar,
+            theme: yellow,
           },
         ],
       };
@@ -117,7 +129,7 @@
         },
       },
       title() {
-        return this.md ? 'Onsen UI' : this.tabs[this.index].title || this.tabs[this.index].label;
+        return this.md ? 'Hikari Food' : this.tabs[this.index].title || this.tabs[this.index].label;
       },
       swipeTheme() {
         return this.md && {
